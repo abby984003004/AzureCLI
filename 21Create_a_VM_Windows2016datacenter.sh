@@ -1,0 +1,41 @@
+## Quickstart: Create a Windows virtual machine with the Azure CLI
+## https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-cli
+
+# Create resource group
+az group create --name testWindowsEURgv1 --location eastus
+
+# Create a Virtual machine
+az vm create \
+    --resource-group testWindowsEURgv1 \
+    --name myWin2016VMv1 \
+    --image win2016datacenter \
+    --size Standard_D4s_v3 \
+    --public-ip-sku Standard \
+    --admin-username testuser 
+
+# Image version example    
+#--image win2016datacenter \
+
+# VM size example
+#--size Standard_D4s_v3 \
+
+# Open port 80 for web trffic 
+#az vm open-port --port 80 --resource-group myResourceGroup --name myVM
+
+# Stop virtual machine
+#az vm stop --resource-group testWindowsRg --name myWindows2016VM 
+
+# Start virtual machine
+#az vm start --resource-group testWindowsRg --name myWindows2016VM
+
+# Show the ResourceGroup
+#az group --output table 
+
+# Check the VM status and Get public IP address
+#az vm list -d -o table
+
+# PowerShell, Connect to virtual machine via RDP
+#mstsc /v:publicIpAddress
+
+# Clean up resources
+#az group delete --name testWindowsRg --no-wait --yes

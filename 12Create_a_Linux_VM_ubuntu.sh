@@ -2,19 +2,19 @@
 
 ## Tutorial: Create and Manage Linux VMs with the Azure CLI
 ## https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-vm
-## Find Linux VM images in the Azure Marketplace with the AzureCLI                                                      ## https://docs.microsoft.com/en-us/azure/virtual-machines/linux/cli-ps-findimage 
+## Find Linux VM images in the Azure Marketplace with the AzureCLI                                                                                                                                        ## https://docs.microsoft.com/en-us/azure/virtual-machines/linux/cli-ps-findimage 
 
 # Create resource group
 az group create --name testUbuntuRg --location eastasia
 
 # Create virtual machine
 az vm create \
-	    --resource-group testUbuntuRg \
-	    --name myUbuntu1804vm \
-	    --image Canonical:UbuntuServer:18.04-LTS:18.04.202107200 \
-	    --size Standard_D4s_v3 \
-	    --admin-username testuser \
-	    --generate-ssh-keys
+    --resource-group testUbuntuRg \
+    --name myUbuntu1804vm0824 \
+    --image Canonical:UbuntuServer:18.04-LTS:18.04.202107200 \
+    --size Standard_D4s_v3 \
+    --admin-username azureuser \
+    --generate-ssh-keys
 
 ## Image example
 #Canonical|UbuntuServer|18.04-LTS|18.04.202103250
